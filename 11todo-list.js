@@ -14,15 +14,16 @@ function renderTodo(){
       // const dueDate = todoobject.dueDate;
       const {name, dueDate} = todoobject; //destructring
 
-            const html = `<p>
-
-      ${name} ${dueDate}
+            const html = `
+      
+      <div> ${name}</div>
+     <div> ${dueDate} </div>
+      
       <button onclick="
       todolist.splice(${i}, 1);
       renderTodo();
-      ">delete</button>
-      
-      </p>`;
+      " class = "delete-todo-button">delete</button>
+     `;
 
       todolisthtml += html;
    }
